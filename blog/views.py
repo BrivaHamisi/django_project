@@ -30,5 +30,5 @@ def home(request):
     # return HttpResponse("Hello, world. You're at the blog home.")
 
 def about(request):
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html', {'title': 'About'})
     # return HttpResponse("This is the about page.")
