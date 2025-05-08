@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
     to { opacity: 1; }
 }
 
-/* Sidebar Content Section */
+/* Content Section (Sidebar and Forms) */
 .content-section {
     background: #ffffff;
     padding: 20px;
@@ -68,8 +68,14 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-3px);
 }
 
+.content-section h2 {
+    font-size: 1.5rem; /* Matches .article-title */
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
 .content-section h3 {
-    font-size: 1.3rem; /* Less prominent */
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -153,6 +159,77 @@ a.article-title:hover {
     text-decoration: none;
 }
 
+/* Form Styles */
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    font-size: 0.95rem;
+    color: #2d3748;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group legend {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2d3748;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.btn-primary {
+    background: #3b82f6;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+.border-top,
+.border-bottom {
+    border-color: #e5e7eb !important;
+}
+
+form .text-muted a {
+    color: #374151;
+    font-weight: 500;
+}
+
+form .text-muted a:hover {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
     .main-content {
@@ -163,7 +240,8 @@ a.article-title:hover {
         padding: 15px;
         margin-bottom: 20px;
     }
-    .article-title {
+    .article-title,
+    .content-section h2 {
         font-size: 1.3rem;
     }
     .article-content {
@@ -171,5 +249,8 @@ a.article-title:hover {
     }
     .content-section h3 {
         font-size: 1.2rem;
+    }
+    .form-group legend {
+        font-size: 1.1rem;
     }
 }
